@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var tipPercentage = 20
     @FocusState private var amountIsFocused: Bool
     
-    let tipPercentages = [10, 15, 20, 25, 0]
+    let localCurrency:FloatingPointFormatStyle<Double>.Currency = .currency(code: Locale.current.currency?.identifier ?? "USD")
     
     var totalPerPerson: Double {
         //Calculate the total per person here
@@ -25,12 +25,19 @@ struct ContentView: View {
         let amountPerPerson = grandTotal / peopleCount
         return amountPerPerson
     }
+    var totalPlusTip: Double {
+        //Calculate the total plus tip
+        let tipSelection = Double(tipPercentage)
+        let tipValue = checkAmount / 100 * tipSelection
+        let grandTotal = checkAmount + tipValue
+        return grandTotal
+    }
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    TextField("Amount", value: $checkAmount, format: localCurrency)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
@@ -44,18 +51,22 @@ struct ContentView: View {
                 }
                     Section {
                         Picker("Tip Percentage", selection: $tipPercentage) {
-                            ForEach(tipPercentages, id: \.self){
+                            ForEach(0..<101, id: \.self){
                                 Text($0, format: .percent)
                             }
                         }
-                        .pickerStyle(.segmented)
                     } header: {
                         Text("How much tip do you want to leave?")
                     }
-                Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                Section{
+                    Text(totalPlusTip, format: localCurrency)
                 }header: {
-                    Text("Total")
+                    Text("Grand Total")
+                }
+                Section {
+                    Text(totalPerPerson, format: localCurrency)
+                }header: {
+                    Text("Amount Per Person")
                 }
             }
             .navigationTitle("WeSplit")
