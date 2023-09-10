@@ -32,6 +32,13 @@ struct ContentView: View {
         let grandTotal = checkAmount + tipValue
         return grandTotal
     }
+    private var isNoTip: Bool {
+        if (tipPercentage == 0) {
+            return true
+        } else {
+            return false
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -55,11 +62,13 @@ struct ContentView: View {
                                 Text($0, format: .percent)
                             }
                         }
+                        
                     } header: {
                         Text("How much tip do you want to leave?")
                     }
                 Section{
                     Text(totalPlusTip, format: localCurrency)
+                        .foregroundStyle(isNoTip ? .red :.primary)
                 }header: {
                     Text("Grand Total")
                 }
