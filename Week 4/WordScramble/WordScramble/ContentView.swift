@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var errorMessage = ""
     @State private var showingError = false
     
+    @State private var score = 0
+    
     
     var body: some View {
     NavigationView {
@@ -24,7 +26,7 @@ struct ContentView: View {
                     TextField("Enter your word", text: $newWord)
                         .autocapitalization(.none)
                 }
-                Section {
+                Section("Score: \(score)") {
                     ForEach(usedWords, id: \.self) { word in
                         HStack {
                             Image(systemName: "\(word.count).circle")
@@ -33,9 +35,13 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationTitle(rootWord)
+        
+            .navigationTitle("Start word: \(rootWord)")
             .onSubmit(addNewWord)
             .onAppear(perform: startGame)
+            .toolbar {
+                Button("New Game", action: startGame)
+            }
             .alert(errorTitle, isPresented: $showingError) {
                 Button("Ok", role: .cancel) { }
             } message: {
@@ -62,12 +68,27 @@ struct ContentView: View {
             return
         }
         
+        guard answer.count > 3 else {
+            wordError(title: "Word too short", message: "Words must be at least four letters long.")
+            return
+        }
+        
+        guard answer != rootWord else {
+            wordError(title: "Nice try…", message: "You can't use your starting word!")
+            return
+        }
+        
         withAnimation{
             usedWords.insert(answer, at: 0)
         }
         newWord = ""
+        score += answer.count
     }
     func startGame() {
+        newWord = ""
+        usedWords.removeAll()
+        score = 0
+        
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
