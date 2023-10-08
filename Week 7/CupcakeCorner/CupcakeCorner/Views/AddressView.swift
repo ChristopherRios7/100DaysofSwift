@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddressView: View {
-    @ObservedObject var order: Order
+    @ObservedObject var order: SharedOrder
     var body: some View {
         Form {
             Section {
@@ -34,6 +34,6 @@ struct AddressView: View {
 
 #Preview {
     NavigationView{
-        AddressView(order: Order())
+        AddressView(order: SharedOrder())
     }
 }

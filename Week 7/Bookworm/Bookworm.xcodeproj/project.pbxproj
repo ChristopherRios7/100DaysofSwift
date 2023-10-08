@@ -7,30 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D1EF87D2ACCEDBC00305815 /* CupcakeCornerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EF87C2ACCEDBC00305815 /* CupcakeCornerApp.swift */; };
-		0D1EF87F2ACCEDBC00305815 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EF87E2ACCEDBC00305815 /* ContentView.swift */; };
-		0D1EF8812ACCEDBE00305815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1EF8802ACCEDBE00305815 /* Assets.xcassets */; };
-		0D1EF8842ACCEDBE00305815 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1EF8832ACCEDBE00305815 /* Preview Assets.xcassets */; };
-		0D77AD512AD0E48A006C3CB0 /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D77AD502AD0E48A006C3CB0 /* String-EmptyChecking.swift */; };
-		0D9C28A72ACDD06000A8B24F /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C28A62ACDD06000A8B24F /* Order.swift */; };
-		0D9C28A92ACDD82B00A8B24F /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C28A82ACDD82A00A8B24F /* AddressView.swift */; };
-		0D9C28AB2ACDDBDD00A8B24F /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9C28AA2ACDDBDC00A8B24F /* CheckoutView.swift */; };
+		0D149ADC2AD2398B0078D6B8 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D149ADB2AD2398B0078D6B8 /* BookwormApp.swift */; };
+		0D149ADE2AD2398B0078D6B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D149ADD2AD2398B0078D6B8 /* ContentView.swift */; };
+		0D149AE02AD2398D0078D6B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D149ADF2AD2398D0078D6B8 /* Assets.xcassets */; };
+		0D149AE32AD2398D0078D6B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D149AE22AD2398D0078D6B8 /* Preview Assets.xcassets */; };
+		0D149AEB2AD240A80078D6B8 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D149AE92AD240A80078D6B8 /* Bookworm.xcdatamodeld */; };
+		0D149AED2AD2414C0078D6B8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D149AEC2AD2414C0078D6B8 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D1EF8792ACCEDBC00305815 /* CupcakeCorner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CupcakeCorner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0D1EF87C2ACCEDBC00305815 /* CupcakeCornerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeCornerApp.swift; sourceTree = "<group>"; };
-		0D1EF87E2ACCEDBC00305815 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		0D1EF8802ACCEDBE00305815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0D1EF8832ACCEDBE00305815 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0D77AD502AD0E48A006C3CB0 /* String-EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
-		0D9C28A62ACDD06000A8B24F /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
-		0D9C28A82ACDD82A00A8B24F /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
-		0D9C28AA2ACDDBDC00A8B24F /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		0D149AD82AD2398B0078D6B8 /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D149ADB2AD2398B0078D6B8 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
+		0D149ADD2AD2398B0078D6B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0D149ADF2AD2398D0078D6B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0D149AE22AD2398D0078D6B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0D149AEA2AD240A80078D6B8 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
+		0D149AEC2AD2414C0078D6B8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0D1EF8762ACCEDBC00305815 /* Frameworks */ = {
+		0D149AD52AD2398B0078D6B8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,97 +36,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D1EF8702ACCEDBC00305815 = {
+		0D149ACF2AD2398B0078D6B8 = {
 			isa = PBXGroup;
 			children = (
-				0D1EF87B2ACCEDBC00305815 /* CupcakeCorner */,
-				0D1EF87A2ACCEDBC00305815 /* Products */,
+				0D149ADA2AD2398B0078D6B8 /* Bookworm */,
+				0D149AD92AD2398B0078D6B8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0D1EF87A2ACCEDBC00305815 /* Products */ = {
+		0D149AD92AD2398B0078D6B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D1EF8792ACCEDBC00305815 /* CupcakeCorner.app */,
+				0D149AD82AD2398B0078D6B8 /* Bookworm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0D1EF87B2ACCEDBC00305815 /* CupcakeCorner */ = {
+		0D149ADA2AD2398B0078D6B8 /* Bookworm */ = {
 			isa = PBXGroup;
 			children = (
-				0D9C28A52ACDD04400A8B24F /* Views */,
-				0D9C28A42ACDD03300A8B24F /* Utils */,
-				0D1EF87C2ACCEDBC00305815 /* CupcakeCornerApp.swift */,
-				0D1EF8802ACCEDBE00305815 /* Assets.xcassets */,
-				0D1EF8822ACCEDBE00305815 /* Preview Content */,
+				0D149ADB2AD2398B0078D6B8 /* BookwormApp.swift */,
+				0D149ADD2AD2398B0078D6B8 /* ContentView.swift */,
+				0D149ADF2AD2398D0078D6B8 /* Assets.xcassets */,
+				0D149AE12AD2398D0078D6B8 /* Preview Content */,
+				0D149AE92AD240A80078D6B8 /* Bookworm.xcdatamodeld */,
+				0D149AEC2AD2414C0078D6B8 /* DataController.swift */,
 			);
-			path = CupcakeCorner;
+			path = Bookworm;
 			sourceTree = "<group>";
 		};
-		0D1EF8822ACCEDBE00305815 /* Preview Content */ = {
+		0D149AE12AD2398D0078D6B8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				0D1EF8832ACCEDBE00305815 /* Preview Assets.xcassets */,
+				0D149AE22AD2398D0078D6B8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0D9C28A42ACDD03300A8B24F /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				0D9C28A62ACDD06000A8B24F /* Order.swift */,
-				0D77AD502AD0E48A006C3CB0 /* String-EmptyChecking.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		0D9C28A52ACDD04400A8B24F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0D1EF87E2ACCEDBC00305815 /* ContentView.swift */,
-				0D9C28A82ACDD82A00A8B24F /* AddressView.swift */,
-				0D9C28AA2ACDDBDC00A8B24F /* CheckoutView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D1EF8782ACCEDBC00305815 /* CupcakeCorner */ = {
+		0D149AD72AD2398B0078D6B8 /* Bookworm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D1EF8872ACCEDBE00305815 /* Build configuration list for PBXNativeTarget "CupcakeCorner" */;
+			buildConfigurationList = 0D149AE62AD2398D0078D6B8 /* Build configuration list for PBXNativeTarget "Bookworm" */;
 			buildPhases = (
-				0D1EF8752ACCEDBC00305815 /* Sources */,
-				0D1EF8762ACCEDBC00305815 /* Frameworks */,
-				0D1EF8772ACCEDBC00305815 /* Resources */,
+				0D149AD42AD2398B0078D6B8 /* Sources */,
+				0D149AD52AD2398B0078D6B8 /* Frameworks */,
+				0D149AD62AD2398B0078D6B8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CupcakeCorner;
-			productName = CupcakeCorner;
-			productReference = 0D1EF8792ACCEDBC00305815 /* CupcakeCorner.app */;
+			name = Bookworm;
+			productName = Bookworm;
+			productReference = 0D149AD82AD2398B0078D6B8 /* Bookworm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0D1EF8712ACCEDBC00305815 /* Project object */ = {
+		0D149AD02AD2398B0078D6B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
-					0D1EF8782ACCEDBC00305815 = {
-						CreatedOnToolsVersion = 15.0;
+					0D149AD72AD2398B0078D6B8 = {
+						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
-			buildConfigurationList = 0D1EF8742ACCEDBC00305815 /* Build configuration list for PBXProject "CupcakeCorner" */;
+			buildConfigurationList = 0D149AD32AD2398B0078D6B8 /* Build configuration list for PBXProject "Bookworm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,46 +116,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 0D1EF8702ACCEDBC00305815;
-			productRefGroup = 0D1EF87A2ACCEDBC00305815 /* Products */;
+			mainGroup = 0D149ACF2AD2398B0078D6B8;
+			productRefGroup = 0D149AD92AD2398B0078D6B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D1EF8782ACCEDBC00305815 /* CupcakeCorner */,
+				0D149AD72AD2398B0078D6B8 /* Bookworm */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D1EF8772ACCEDBC00305815 /* Resources */ = {
+		0D149AD62AD2398B0078D6B8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1EF8842ACCEDBE00305815 /* Preview Assets.xcassets in Resources */,
-				0D1EF8812ACCEDBE00305815 /* Assets.xcassets in Resources */,
+				0D149AE32AD2398D0078D6B8 /* Preview Assets.xcassets in Resources */,
+				0D149AE02AD2398D0078D6B8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0D1EF8752ACCEDBC00305815 /* Sources */ = {
+		0D149AD42AD2398B0078D6B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D9C28A72ACDD06000A8B24F /* Order.swift in Sources */,
-				0D9C28A92ACDD82B00A8B24F /* AddressView.swift in Sources */,
-				0D9C28AB2ACDDBDD00A8B24F /* CheckoutView.swift in Sources */,
-				0D1EF87F2ACCEDBC00305815 /* ContentView.swift in Sources */,
-				0D77AD512AD0E48A006C3CB0 /* String-EmptyChecking.swift in Sources */,
-				0D1EF87D2ACCEDBC00305815 /* CupcakeCornerApp.swift in Sources */,
+				0D149ADE2AD2398B0078D6B8 /* ContentView.swift in Sources */,
+				0D149AED2AD2414C0078D6B8 /* DataController.swift in Sources */,
+				0D149AEB2AD240A80078D6B8 /* Bookworm.xcdatamodeld in Sources */,
+				0D149ADC2AD2398B0078D6B8 /* BookwormApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0D1EF8852ACCEDBE00305815 /* Debug */ = {
+		0D149AE42AD2398D0078D6B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -240,7 +216,7 @@
 			};
 			name = Debug;
 		};
-		0D1EF8862ACCEDBE00305815 /* Release */ = {
+		0D149AE52AD2398D0078D6B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,14 +272,14 @@
 			};
 			name = Release;
 		};
-		0D1EF8882ACCEDBE00305815 /* Debug */ = {
+		0D149AE72AD2398D0078D6B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CupcakeCorner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bookworm/Preview Content\"";
 				DEVELOPMENT_TEAM = AMDFD235M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -317,7 +293,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.christopherrios.CupcakeCorner;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christopherrios.Bookworm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,14 +301,14 @@
 			};
 			name = Debug;
 		};
-		0D1EF8892ACCEDBE00305815 /* Release */ = {
+		0D149AE82AD2398D0078D6B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CupcakeCorner/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Bookworm/Preview Content\"";
 				DEVELOPMENT_TEAM = AMDFD235M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -346,7 +322,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.christopherrios.CupcakeCorner;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.christopherrios.Bookworm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -357,25 +333,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D1EF8742ACCEDBC00305815 /* Build configuration list for PBXProject "CupcakeCorner" */ = {
+		0D149AD32AD2398B0078D6B8 /* Build configuration list for PBXProject "Bookworm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D1EF8852ACCEDBE00305815 /* Debug */,
-				0D1EF8862ACCEDBE00305815 /* Release */,
+				0D149AE42AD2398D0078D6B8 /* Debug */,
+				0D149AE52AD2398D0078D6B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D1EF8872ACCEDBE00305815 /* Build configuration list for PBXNativeTarget "CupcakeCorner" */ = {
+		0D149AE62AD2398D0078D6B8 /* Build configuration list for PBXNativeTarget "Bookworm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0D1EF8882ACCEDBE00305815 /* Debug */,
-				0D1EF8892ACCEDBE00305815 /* Release */,
+				0D149AE72AD2398D0078D6B8 /* Debug */,
+				0D149AE82AD2398D0078D6B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0D149AE92AD240A80078D6B8 /* Bookworm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0D149AEA2AD240A80078D6B8 /* Bookworm.xcdatamodel */,
+			);
+			currentVersion = 0D149AEA2AD240A80078D6B8 /* Bookworm.xcdatamodel */;
+			path = Bookworm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 0D1EF8712ACCEDBC00305815 /* Project object */;
+	rootObject = 0D149AD02AD2398B0078D6B8 /* Project object */;
 }
