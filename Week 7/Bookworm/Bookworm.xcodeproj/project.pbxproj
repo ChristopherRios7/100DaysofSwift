@@ -17,6 +17,7 @@
 		0DB5A1DF2AD31E4B0099A86B /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5A1DE2AD31E4B0099A86B /* RatingView.swift */; };
 		0DB5A1E12AD3235D0099A86B /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5A1E02AD3235D0099A86B /* EmojiRatingView.swift */; };
 		0DB5A1E32AD4F60D0099A86B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5A1E22AD4F60D0099A86B /* DetailView.swift */; };
+		0DB5A1E52AD597AB0099A86B /* String-EmptyChecking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB5A1E42AD597AB0099A86B /* String-EmptyChecking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		0DB5A1DE2AD31E4B0099A86B /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		0DB5A1E02AD3235D0099A86B /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		0DB5A1E22AD4F60D0099A86B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		0DB5A1E42AD597AB0099A86B /* String-EmptyChecking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-EmptyChecking.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				0D149AEC2AD2414C0078D6B8 /* DataController.swift */,
+				0DB5A1E42AD597AB0099A86B /* String-EmptyChecking.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				0D149AEB2AD240A80078D6B8 /* Bookworm.xcdatamodeld in Sources */,
 				0DB5A1DF2AD31E4B0099A86B /* RatingView.swift in Sources */,
 				0D149ADC2AD2398B0078D6B8 /* BookwormApp.swift in Sources */,
+				0DB5A1E52AD597AB0099A86B /* String-EmptyChecking.swift in Sources */,
 				0DB5A1DD2AD311CD0099A86B /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

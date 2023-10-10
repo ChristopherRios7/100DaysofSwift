@@ -22,6 +22,7 @@ struct ContentView: View {
                 ForEach(books) { book in
                     NavigationLink {
                         DetailView(book: book)
+                            .opacity(book.rating == 1 ? 0.5 : 1)
                     } label: {
                         HStack {
                             EmojiRatingView(rating: book.rating)
@@ -30,6 +31,7 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(book.title ?? "Unknown Title")
                                     .font(.headline)
+                                    .foregroundColor(book.rating == 1 ? .red : .primary)
                                 Text(book.author ?? "Unknown Author")
                                     .foregroundColor(.secondary)
                             }
