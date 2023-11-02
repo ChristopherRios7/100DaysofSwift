@@ -16,6 +16,7 @@ struct Mission: Codable, Identifiable {
     let launchDate: Date?
     let crew: [CrewRole]
     let description: String
+    let badge: String
     
     
     var displayName: String {
