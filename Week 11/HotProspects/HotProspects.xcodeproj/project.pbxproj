@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D504FCE2AFC7ADC000C3F98 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D504FCD2AFC7ADC000C3F98 /* ImageSaver.swift */; };
+		0D504FD02AFC7E33000C3F98 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D504FCF2AFC7E33000C3F98 /* FileManager-DocumentsDirectory.swift */; };
 		0D75ACCA2AF411DE0073B0F3 /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75ACC92AF411DE0073B0F3 /* HotProspectsApp.swift */; };
 		0D75ACCC2AF411DE0073B0F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75ACCB2AF411DE0073B0F3 /* ContentView.swift */; };
 		0D75ACCE2AF411DF0073B0F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D75ACCD2AF411DF0073B0F3 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D504FCD2AFC7ADC000C3F98 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		0D504FCF2AFC7E33000C3F98 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		0D75ACC62AF411DE0073B0F3 /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D75ACC92AF411DE0073B0F3 /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		0D75ACCB2AF411DE0073B0F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0CC9922AFB211A008C3ACE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0D504FCD2AFC7ADC000C3F98 /* ImageSaver.swift */,
+				0D504FCF2AFC7E33000C3F98 /* FileManager-DocumentsDirectory.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		0D75ACBD2AF411DE0073B0F3 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +72,7 @@
 		0D75ACC82AF411DE0073B0F3 /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
+				0D0CC9922AFB211A008C3ACE /* Utils */,
 				0DEEB9502AF7F8B3007F0565 /* Model */,
 				0DEEB94D2AF7F2D2007F0565 /* Views */,
 				0D75ACC92AF411DE0073B0F3 /* HotProspectsApp.swift */,
@@ -171,6 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEEB94C2AF7F2CC007F0565 /* MeView.swift in Sources */,
+				0D504FD02AFC7E33000C3F98 /* FileManager-DocumentsDirectory.swift in Sources */,
+				0D504FCE2AFC7ADC000C3F98 /* ImageSaver.swift in Sources */,
 				0DEEB94F2AF7F8A5007F0565 /* Prospect.swift in Sources */,
 				0DEEB94A2AF7F2C0007F0565 /* ProspectsView.swift in Sources */,
 				0D75ACCC2AF411DE0073B0F3 /* ContentView.swift in Sources */,
@@ -311,7 +327,8 @@
 				DEVELOPMENT_TEAM = AMDFD235M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need this permission to scan QR Codes";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need this permission to add your QR Code to your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,7 +358,8 @@
 				DEVELOPMENT_TEAM = AMDFD235M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need this permission to scan QR Codes";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We need this permission to add your QR Code to your photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
