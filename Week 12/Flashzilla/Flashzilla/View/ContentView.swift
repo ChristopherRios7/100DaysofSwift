@@ -5,7 +5,6 @@
 //  Created by Christopher Rios on 11/9/23.
 //
 
-import CoreHaptics
 import SwiftUI
 
 extension View {
@@ -17,13 +16,17 @@ extension View {
 
 struct ContentView: View {
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
-    @State private var cards = Array<Card>(repeating: Card.example, count: 10)
+    @Environment(\.accessibilityVoiceOverEnabled) var voiceOverEnabled
+    @State private var cards = DataManager.load()
     
     @State private var timeRemaining = 100
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     @Environment(\.scenePhase) var scenePhase
     @State private var isActive = true
+    
+    @State private var showingEditScreen = false
+    
     var body: some View {
         ZStack {
             Image("background")
@@ -33,45 +36,87 @@ struct ContentView: View {
             VStack {
                 Text("Time: \(timeRemaining)")
                     .font(.largeTitle)
-                    .foregroundStyle(.white)
-                    .padding(.horizontal,20)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
                     .padding(.vertical, 5)
                     .background(.black.opacity(0.75))
                     .clipShape(Capsule())
+                
                 ZStack {
-                    ForEach(0..<cards.count, id: \.self) { index in
-                        CardView(card: cards[index]) {
+                    ForEach(Array(cards.enumerated()), id: \.element) { item in
+                        CardView(card: item.element) { reinsert in
                             withAnimation {
-                                removeCard(at: index)
+                                removeCard(at: item.offset, reinsert: reinsert)
                             }
                         }
-                        .stacked(at: index, in: cards.count)
+                        .stacked(at: item.offset, in: cards.count)
+                        .allowsHitTesting(item.offset == cards.count - 1)
+                        .accessibilityHidden(item.offset < cards.count - 1)
                     }
                 }
-                .allowsHitTesting(timeRemaining > 0 )
+                .allowsHitTesting(timeRemaining > 0)
                 
                 if cards.isEmpty {
-                    Button("Start Again?", action: resetCards)
+                    Button("Start Again", action: resetCards)
                         .padding()
                         .background(.white)
-                        .foregroundStyle(.black)
+                        .foregroundColor(.black)
                         .clipShape(Capsule())
                 }
             }
-            if differentiateWithoutColor {
+            
+            VStack {
+                HStack {
+                    Spacer()
+                    
+                    Button {
+                        showingEditScreen = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .padding()
+                            .background(.black.opacity(0.7))
+                            .clipShape(Circle())
+                    }
+                }
+                
+                Spacer()
+            }
+            .foregroundColor(.white)
+            .font(.largeTitle)
+            .padding()
+            
+            if differentiateWithoutColor || voiceOverEnabled {
                 VStack {
                     Spacer()
                     
                     HStack {
-                        Image(systemName: "xmark.circle")
-                            .padding()
-                            .background(.black.opacity(0.7))
-                            .clipShape(Circle())
+                        Button {
+                            withAnimation {
+                                removeCard(at: cards.count - 1, reinsert: true)
+                            }
+                        } label: {
+                            Image(systemName: "xmark.circle")
+                                .padding()
+                                .background(.black.opacity(0.7))
+                                .clipShape(Circle())
+                        }
+                        .accessibilityLabel("Wrong")
+                        .accessibilityHint("Mark your answer as being incorrect")
+                        
                         Spacer()
-                        Image(systemName: "checkmark.circle")
-                            .padding()
-                            .background(.black.opacity(0.7))
-                            .clipShape(Circle())
+                        
+                        Button {
+                            withAnimation {
+                                removeCard(at: cards.count - 1, reinsert: false)
+                            }
+                        } label: {
+                            Image(systemName: "checkmark.circle")
+                                .padding()
+                                .background(.black.opacity(0.7))
+                                .clipShape(Circle())
+                        }
+                        .accessibilityLabel("Correct")
+                        .accessibilityHint("Mark your answer is being correct.")
                     }
                     .foregroundColor(.white)
                     .font(.largeTitle)
@@ -81,25 +126,42 @@ struct ContentView: View {
         }
         .onReceive(timer) { time in
             guard isActive else { return }
+            
             if timeRemaining > 0 {
                 timeRemaining -= 1
             }
         }
-        .onChange(of: scenePhase ){ newPhase in
+        .onChange(of: scenePhase) { newPhase in
             if newPhase == .active {
-                isActive = true
+                if cards.isEmpty == false {
+                    isActive = true
+                }
             } else {
-                 isActive = false
+                isActive = false
             }
         }
+        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards, content: EditCards.init)
+        .onAppear(perform: resetCards)
     }
-    func removeCard(at index: Int) {
-        cards.remove(at: index)
+    
+    func removeCard(at index: Int, reinsert: Bool) {
+        guard index >= 0 else { return }
+        
+        if reinsert {
+            cards.move(fromOffsets: IndexSet(integer: index), toOffset: 0)
+        } else {
+            cards.remove(at: index)
+        }
+        
+        if cards.isEmpty {
+            isActive = false
+        }
     }
     
     func resetCards() {
-        cards = Array<Card>(repeating: Card.example, count: 10)
+        timeRemaining = 100
         isActive = true
+        cards = DataManager.load()
     }
 }
 
