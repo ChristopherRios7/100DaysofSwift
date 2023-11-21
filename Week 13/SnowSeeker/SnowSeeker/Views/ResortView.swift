@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ResortView: View {
     let resort: Resort
     
@@ -21,9 +22,17 @@ struct ResortView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Image(decorative: resort.id)
-                    .resizable()
-                    .scaledToFit()
+                ZStack(alignment: .bottomTrailing) {
+                    Image(decorative: resort.id)
+                        .resizable()
+                        .scaledToFit()
+                    
+                    Text(resort.imageCredit)
+                        .padding(10)
+                        .background(.black.opacity(0.7))
+                        .foregroundColor(.white)
+                        .offset(x: -5, y: -5)
+                }
                 
                 HStack {
                     if sizeClass == .compact && typeSize > .large {
@@ -83,4 +92,5 @@ struct ResortView: View {
     NavigationView {
         ResortView(resort: Resort.example)
     }
+    .environmentObject(Favorites())
 }
