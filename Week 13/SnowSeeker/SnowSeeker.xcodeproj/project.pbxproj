@@ -50,14 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D3FC7022B0A72EF00E9C55A /* Model */ = {
+		0D3FC7022B0A72EF00E9C55A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				0D3FC7032B0A732800E9C55A /* Resort.swift */,
 				0D5A0E4B2B0C18C500CF43AE /* Facility.swift */,
 				0D5A0E4F2B0C1BE200CF43AE /* Favorites.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		0D3FC7052B0A748D00E9C55A /* Utils */ = {
@@ -101,7 +101,7 @@
 			children = (
 				0D3FC7082B0A7B1F00E9C55A /* Views */,
 				0D3FC7052B0A748D00E9C55A /* Utils */,
-				0D3FC7022B0A72EF00E9C55A /* Model */,
+				0D3FC7022B0A72EF00E9C55A /* Models */,
 				0D9C0B992B099E7500A60B32 /* SnowSeekerApp.swift */,
 				0D3FC7002B0A724100E9C55A /* resorts.json */,
 				0D9C0B9D2B099E7700A60B32 /* Assets.xcassets */,

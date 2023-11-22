@@ -31,7 +31,7 @@ struct ContentView: View {
     @State private var showingSortOptions = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List(sortedResorts) { resort in
                 NavigationLink {
                     ResortView(resort: resort)
@@ -78,7 +78,7 @@ struct ContentView: View {
                 Button("By Country") { sortType = .country }
             }
             
-            WelcomeView()
+            //WelcomeView()
         }
         .environmentObject(favorites)
     }
